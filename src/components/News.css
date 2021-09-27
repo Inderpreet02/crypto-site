@@ -1,0 +1,13 @@
+.news__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.news{
+    padding: 20px;
+}
+
+.news > h1{
+    margin: 50px 0;
+}

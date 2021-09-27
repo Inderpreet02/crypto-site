@@ -1,0 +1,31 @@
+.main{
+    flex: 0.7;
+    padding: 20px;
+}
+
+.main > h1{
+    margin: 0 0 40px 0;
+}
+
+.stat__heading{
+    color: rgb(156, 156, 156);
+    font-size: 25px;
+}
+
+.stat__data{
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.main__container{
+    padding-top: 50px;
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.main__stat{
+    margin-right: 100px;
+}
