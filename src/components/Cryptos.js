@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CryptoCard from './CryptoCard';
 import useFetchcryptoData from './useFetchcryptoData';
 import "./Cryptos.css"
@@ -8,10 +8,22 @@ import ReactLoading from "react-loading";
 function Cryptos( {count} ) {
 
     const { data: coinData } = useFetchcryptoData(count);
-    const cryptos = coinData?.data?.coins;
+    const [cryptos, setCryptos] = useState(coinData?.data?.coins);
+    const [term, setTerm] = useState("");
+    // const handelSubmit = (e) => {
+
+    //     const { data } = useFetchSearch(term);
+    //     e.preventDefautl();
+    //     console.log(term);
+    // }
+
+    console.log(cryptos);
 
     return (
         <div className="crypto">
+            <form>
+                <input type="text" className="crypto__search" placeholder="Coins" value={term} onChange={(e)=>setTerm(e.target.value)}/>
+            </form>
             <div className="crypto__head">
                 <h1>Cryptocurrencies</h1>
                 <Link to="/cryptos" className="showMore">

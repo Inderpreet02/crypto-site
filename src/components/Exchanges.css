@@ -1,0 +1,61 @@
+.box__icon{
+    max-width: 50px;
+    flex: 0.7;
+    margin-right: 10px;
+}
+
+.exe{
+    display: flex;
+    flex: 0.8;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exe__container{
+    display: flex;
+    width: 800px;
+    flex-direction: column;
+}
+
+.exe__box{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.exe__heading{
+    margin: 50px;
+}
+
+.exe__container{
+    margin-top: 100px;
+}
+
+.exe__box{
+    display: flex;
+    align-items: center;
+    background-color: rgb(131, 131, 131);
+    height: 80px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.box__info > p{
+    padding: 0 10px;
+}
+
+.exe__boxName{
+    display: flex;
+    align-items: center;
+}
+
+.exe__boxName > p{
+    padding: 5px;
+}
+
+.exe__boxLabel{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    width: 200px;
+}

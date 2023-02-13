@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Main from './components/Main';
 import Sidebar from './components/Sidebar';
@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 import Cryptos from './components/Cryptos';
 import CryptoDetails from './components/CryptoDetails';
+import Exchanges from './components/Exchanges';
+import { db } from './firebase';
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
           </Route>
           <Route path="/cryptos">
             <Cryptos count={100}/>
+          </Route>
+          <Route path="/exchanges">
+            <Exchanges/>
           </Route>
           <Route path="/">
           <Main/>

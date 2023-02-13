@@ -5,16 +5,20 @@ import millify from "millify";
 import Cryptos from "./Cryptos";
 import News from "./News";
 import ReactLoading from "react-loading";
+// import ChatBot from "./ChatBot";
 
 function Main() {
 
     const { data, isFetching } = useFetchGlobalData();
     const globalStats = data?.data;
 
-    if(isFetching) return "Loading ....."
+    if(isFetching) {
+        return "Loading ....."
+    };
     // console.log(globalStats);
     return (
         <div className="main">
+            {/* <ChatBot/> */}
             <h1>Global Crypto Stats</h1>
             {globalStats ?
             <div className="main__container">
@@ -23,6 +27,7 @@ function Main() {
                         <h1 className="stat__heading">
                             Total Cryptocurrencies
                         </h1>
+
                         <p className="stat__data">
                             {millify(globalStats?.totalCoins)}
                         </p>

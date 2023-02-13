@@ -1,19 +1,18 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
-import axios from "axios"
 
-const useFetchCoinHistory = ( { coinId, timestamp } ) => {
-
+const useFetchExchanges = () => {
 
     var options = {
         method: 'GET',
-        url: `https://coinranking1.p.rapidapi.com/coin/${coinId}/history/${timestamp}`,
+        url: 'https://coinranking1.p.rapidapi.com/exchanges',
         headers: {
           'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
           'x-rapidapi-key': '3744bb210bmsh9079a40f3323be6p16506djsn74dfee50bfc2'
         }
-      };
+    };
 
-    const [data, setData] = useState(null);
+    const [data, setData] = useState()
 
     useEffect(() => {
 
@@ -26,8 +25,8 @@ const useFetchCoinHistory = ( { coinId, timestamp } ) => {
 
     }, [])
 
-    return {data};
+    return { data }
+      
+}
 
-};
-
-export default useFetchCoinHistory
+export default useFetchExchanges;

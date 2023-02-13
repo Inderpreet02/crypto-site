@@ -43,6 +43,7 @@ function CryptoDetails() {
         { title: 'Total Supply', value: `$ ${millify(useCoin.totalSupply)}` },
         { title: 'Circulating Supply', value: `$ ${millify(useCoin.circulatingSupply)}`},
     ];
+
     return (
         <div className="details">
             <div className="details__container">
